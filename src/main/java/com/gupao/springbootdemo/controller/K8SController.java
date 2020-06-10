@@ -4,8 +4,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.regex.Pattern;
 
 @RestController
@@ -21,7 +19,5 @@ public class K8SController {
 		if (!pattern.matcher("2019123").find()) {
 			System.out.println("日期格式错误");
 		}
-		Date date = new SimpleDateFormat("yyyyMMdd").parse("2019123");
-		System.out.println(date);
 	}
 }
